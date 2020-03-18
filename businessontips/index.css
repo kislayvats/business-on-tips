@@ -1,0 +1,1026 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body,
+html{
+    font-family: "lato",sans-serif;
+    font-weight: 400; 
+    padding: 0 0 30px 0;
+    height: 100%;
+}
+.header{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom,
+    rgb(84, 82, 79,.5),
+    rgba(71, 192, 145, 0.4)),
+     url("img/freelanceheaderbg.jpeg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 80vh,0 100%);
+    position: relative;
+}
+
+/*registration or sign-up box styling*/
+
+
+
+/*page wrapper*/
+.page-wrapper{
+    min-height: 100%;
+}
+
+/*categories- heading for the cards*/
+#cardheading{
+background-color: cadetblue;
+height: 40px;
+text-transform: uppercase;
+text-align: center;
+line-height: 40px;
+letter-spacing: 10px;
+font-weight: 900;
+font-size: 30px;
+background-image: linear-gradient(to right, rgb(133, 13, 13,.7),rgb(15, 107, 93,.6),rgb(133, 13, 13,.7));
+}
+/*div containing logo of the company in png*/
+.logobox{
+    margin-left: 1.2rem;
+    line-height: .8rem;
+}
+/*div containing the name of the company,its moto and tagline*/
+.companytext{
+    text-align: center;
+   margin: 0;
+    transform: translate(5%,-105%);
+}
+
+
+/*freelance mantra*/
+.companyname{
+    display:block;
+font-weight: 800;
+font-size: 50px;
+text-transform: uppercase;
+color:whitesmoke;
+letter-spacing: 35px;
+transform: translate(1%,-100%);
+padding-right: 50px;
+animation-name: namemove;
+animation-duration: 2s;
+animation-delay: .4s;
+}
+/*animation of company name freelance mantra*/
+@keyframes namemove{
+    0%{
+        opacity:0;
+        transform: translateX(-30px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*a one place community
+.tagline{
+display: block;
+text-transform: uppercase;
+letter-spacing: 15px;
+font-size: 30px;
+font-weight: 700;
+color: #990315;
+}
+*/
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
+/*learn more earn more work more*/
+.companymoto{
+display: block;
+font-size: 20px;
+margin: 0;
+color: #eb4034;
+text-transform: uppercase;
+transform: translateY(80%);
+letter-spacing: 10px;
+font-weight: 900;
+@include clearfix;
+}
+/*button sign in styling*/
+#btin{
+    background-color: #457d20;
+    border-radius: 80px;
+   font-size: 20px;
+    color:white;
+    text-align: center;
+    margin-right: 40px;
+    animation-name: btinmove;
+    animation-duration: 2s;
+    margin-top: 30px;
+    @include clearfix;
+}
+/*button sign in animation*/
+@keyframes btinmove{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*button sign up styling*/
+#btup{
+    background-color: #457d20;
+    border-radius: 80px;
+   font-size: 20px;
+    color:white;
+    text-align: center;  
+    animation-name: btupmove;
+    animation-duration: 2s;
+    margin-top: 30px;
+    @include clearfix;
+}
+/*button sign up animation*/
+@keyframes btupmove{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    80%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*sign in & sign up buttons position in center of the header determining code*/
+.buttons{
+    text-align: center;
+}
+/*sign in button hover effect*/
+#btin:hover{
+    font-size: 28px;
+    color:white;
+   background-image: linear-gradient(to right, rgb(133, 13, 13,.7),rgb(15, 107, 93,.6),rgb(133, 13, 13,.7));
+}
+/*sign up hover effect*/
+#btup:hover{
+    font-size: 28px;
+    color:white;
+    background-image: linear-gradient(to right, rgb(133, 13, 13,.7),rgb(15, 107, 93,.6),rgb(133, 13, 13,.7));
+}
+/*search bar styling*/
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 40px;
+    background-image: linear-gradient(to right, rgb(133, 13, 13,.5),rgb(15, 107, 93,.6),rgb(133, 13, 13,.5));
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+    #searchbarflex{
+        float: right;
+    }
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 200px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+/* social media icons*/
+.socialicons{
+  
+    display: block;
+    font-size: 30px;
+    color: red;
+    text-align: right;
+    transform: translateY(-200px);
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
+.fa-facebook-square:hover{
+    font-size: 40px;
+    color: yellowgreen;
+}
+.fa-twitter-square:hover{
+    font-size: 40px;
+    color: yellowgreen;
+}
+.fa-instagram:hover{
+    font-size: 40px;
+    color: yellowgreen;
+}
+/*
+#learnmore{
+    
+    animation-name: bottomtoup;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes bottomtoup{
+    0%{font-size: 50px;
+        font-weight: 700;
+        opacity: 0;
+transform:tr;
+    }
+    70%{
+        transform: translateX(-10px);
+    }
+    100%{font-size: 20px;
+        font-weight: 900;
+opacity: 1;
+transform: translateX(0);
+    }
+}
+
+
+.workmore{
+    
+    animation-name: btoup;
+    animation-duration: 2s;
+    
+    
+}
+
+@keyframes btoup{
+    0%{font-size: 50px;
+        font-weight: 700;
+        display: none;
+        opacity: 0;
+transform: translateY(10rem);
+    }
+    70%{
+        transform: translateY(-10px);
+    }
+    
+    100% {font-size: 20px;
+        font-weight: 900;
+opacity: 1;
+transform: translateY(0);
+    }
+}
+#earnmore{
+    
+    animation-name:toptob;
+    animation-duration: 2s;
+    
+}
+
+@keyframes toptob{
+    0%{font-size: 50px;
+        font-weight: 700;
+        display: none;
+        opacity: 0;
+transform: translateX(10px);
+    }
+    70%{
+        transform: translateX(-10px);
+    }
+    
+    100% {font-size: 20px;
+        font-weight: 900;
+opacity: 1;
+transform: translateX(0);
+    }
+}
+*/
+
+ /*container containing all cards*/
+ #flippingcards{
+    margin: 20px;
+    background-image: linear-gradient(to right, rgb(133, 13, 13,.2),rgb(15, 107, 93,.3),rgb(133, 13, 13,.2));
+    width: 100%;
+    margin: 0;
+    
+
+}
+/*container containing card skeleton*/
+.maincontainer{
+    position: relative;
+    width: 100px;
+    height: 380px;
+    margin: 15px;   
+}
+/*main card skeleton*/
+.thecard{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    background-color: greenyellow;
+  border-radius: 105px;
+  
+    
+}
+/*hover efeect on cards*/
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+/*front side of all cards*/
+.thefront{
+ display: flex;
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: teal;
+color: tomato;
+border-radius: 105px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+/*back side of all cards*/
+.theback{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: tomato;
+    color: teal;
+    transform: rotateY(180deg);
+    border-radius: 105px;
+    text-align: center;
+justify-content: center;
+align-items: center;
+}
+/*last card margin*/
+#eigthcard{
+    margin-left: 500px;
+}
+/*web development card front side styling*/
+#firstcardfr{
+    background-image: url(img/Web_development\ \ -\ Crop.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/*web deveplopment card back side styling*/
+#firstcardbk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+     url(img/Web_development\ \ -\ Crop.jpg);
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+/*button on cards*/
+.btn-primary{
+   margin-top: 200px;
+   margin-left: 50px;
+   margin-right: 10px;
+}
+/* graphics designing card front face styling*/
+#card2fr{
+    background-image:  url(img/graphics\ designing\ image.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:whitesmoke;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+/* graphics designing card back face styling*/
+#card2bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/graphics\ designing\ image.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+/*button on card 2 i.e graphics designing card*/
+#buttononc2{
+    margin-top: 150px;
+    margin-right: 1px;
+    
+}
+/*ethical hacking card front face styling*/
+#card3fr{
+    background-image:  url(img/ethical-hacking-01\ -\ Crop.png);
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+/*ethical hacking card back face styling*/
+#card3bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/ethical-hacking-01\ -\ Crop.png); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+/*content writing card front face styling*/
+#card4fr{
+    background-image:  url(img/content\ writing.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+/*content writing card back face styling*/
+#card4bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/content\ writing\ option.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+/*health card front face styling*/
+#card5fr{
+    background-image:  url(img/GettyImages-CommunityHealth.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+/*health card back face styling*/
+#card5bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/GettyImages-CommunityHealth.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color:white;
+}
+/*food recipe card front face styling*/
+#card6fr{
+    background-image:  url(img/foodrecipe.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+/*food recipe card back face styling*/
+#card6bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/foodrecipe.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+/*yoga card front face styling*/
+#card7fr{
+    background-image:  url(img/yogaprefer.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:yellow;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*yoga card back face styling*/
+#card7bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/yogaprefer.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+/*books card front face styling*/
+#card8fr{
+    background-image:  url(img/booksprefer.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*books card back face styling*/
+#card8bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/booksprefer.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+}
+/*tree plantation card front face styling*/
+#card9fr{
+    background-image:  url(img/Corporate-Tree-Plantation.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*tree plantation card back face styling*/
+#card9bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/Corporate-Tree-Plantation.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+/*testing card front face styling*/
+#card10fr{
+    background-image:  url(img/softwaretestings.png); 
+    background-position: center;
+    background-size: cover;
+    font-size: 22px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*testing card back face styling*/
+#card10bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/softwaretestings.png); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+/*furnishing card front face styling*/
+#card11fr{
+    background-image:  url(img/furnishing2.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*furnishing card back face styling*/
+#card11bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/furnishing.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color:yellow;
+}
+/*customized software card front face styling*/
+#card12fr{
+    background-image:  url(img/customized\ software.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    
+}
+/*customized software card back face styling*/
+#card12bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/customized\ software.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color:white;
+}
+/*startups card front face styling*/
+#card13fr{
+    background-image:  url(img/startups.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*startups card back face styling*/
+#card13bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/startups.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:white;
+}
+/*jobs card front face styling*/
+#card14fr{
+    background-image:  url(img/jobs.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 32px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 28px;
+}
+/*jobs card back face styling*/
+#card14bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/jobs.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:white;
+}
+/*marketing card front face styling*/
+#card15fr{
+    background-image:  url(img/marketing.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*marketing card back face styling*/
+#card15bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/marketing.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*digital marketing card front face styling*/
+#card16fr{
+    background-image:  url(img/digital\ marketing.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*digital marketing card back face styling*/
+#card16bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/digital\ marketing.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*import and export card front face styling*/
+#card17fr{
+    background-image:  url(img/import\ and\ export2.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 28px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*import and export card back face styling*/
+#card17bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/import\ and\ export2.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*customized product card front face styling*/
+#card18fr{
+    background-image:  url(img/customizedproductpng.png); 
+    background-position: center;
+    background-size: cover;
+    font-size: 36px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    opacity: 90%;
+}
+/*customized product card back face styling*/
+#card18bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/customizedproductpng.png); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*mobile accessories card front face styling*/
+#card19fr{
+    background-image:  url(img/mobile\ accessories.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 36px;
+    color:white;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*mobile accessories card back face styling*/
+#card19bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/mobile\ accessories.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:white;
+}
+/*laptop accessories & spare card front face styling*/
+#card20fr{
+    background-image:  url(img/laptopaccessories.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 36px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*laptop accessories & spare card back face styling*/
+#card20bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/laptopaccessories.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*car accessories card front face styling*/
+#card21fr{
+    background-image:  url(img/caraccessories2.jpg); 
+    background-position: center;
+    background-size: cover;
+    font-size: 40px;
+    color:black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+/*car accessories card back face styling*/
+#card21bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/caraccessories2.jpg); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color:black;
+}
+/*tiktok card front face styling*/
+#card22fr{
+    background-image:  url(img/tiktok2.png); 
+    background-position: center;
+    background-size: cover;
+    font-size: 40px;
+    
+    font-weight: 900;
+    
+    letter-spacing: 10px;
+}
+/*tiktok card back face styling*/
+#card22bk{
+    background-image:linear-gradient(
+        to right bottom,
+        rgb(81, 148, 67,.4),
+        rgb(46, 108, 110,.5)
+    ),
+    url(img/titok.png); 
+    background-position: center;
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    color:black;
+    letter-spacing: 3px;
+}
+/*footer*/
+.footer{
+    background-color: #303036;
+    color: #d3d3d3;
+    height: 300px;
+    position: relative;
+}
+.footer .footer-bottom{
+    background-color: #343a40;
+    color: #686868;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 45px;  
+}
+.footer-section{
+text-decoration: none;
+padding-left: 10px;
+}
+.footer-section a:hover{
+    text-decoration: none;
+    color: #115946;
+}
+#footersectionlinks{
+    float: right;
+}
+.socialiconsftr{
+    display: block;
+    font-size: 30px;
+    color: red;
+    text-align: right;
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
+/* //footer */
+
